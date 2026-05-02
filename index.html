@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>StegoCrypt</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="grid-bg"></div>
+
+<div class="container">
+
+    <div class="badge">🛡️ LSB Steganography Engine</div>
+
+    <h1 class="title">StegoCrypt</h1>
+
+    <p class="subtitle">
+        Hide secret messages inside images. Invisible to the eye, recoverable by you.
+    </p>
+
+    <div class="cards">
+        <a href="/encode" class="card">
+            <div class="icon">🔒</div>
+            <h2>Encode</h2>
+            <p>Hide a message inside an image</p>
+        </a>
+
+        <a href="/decode" class="card">
+            <div class="icon blue">🔓</div>
+            <h2>Decode</h2>
+            <p>Extract a hidden message</p>
+        </a>
+    </div>
+
+    <div class="steps">
+        <span>👁 Upload Image</span>
+        <span>→ 🔒 Embed Message</span>
+        <span>→ 🛡 Secure Output</span>
+    </div>
+
+</div>
+
+</body>
+</html>

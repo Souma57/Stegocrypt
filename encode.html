@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Encode</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="grid-bg"></div>
+
+<a href="/" class="back">← Back</a>
+
+<div class="box">
+    <h2>🔒 Encode Message</h2>
+
+    <form action="/encode" method="POST" enctype="multipart/form-data">
+        
+        <!-- Upload Box -->
+        <label class="upload-box">
+            <input type="file" name="image" required hidden>
+            <div class="upload-content">
+                <p>📤 Drag & Drop or Click to Upload</p>
+                <span>PNG images only</span>
+            </div>
+        </label>
+
+        <!-- Message -->
+        <textarea name="message" placeholder="Type your secret message here..." required></textarea>
+
+        <!-- Button -->
+        <button type="submit" class="btn green">Encode Message</button>
+    </form>
+</div>
+
+</body>
+</html>

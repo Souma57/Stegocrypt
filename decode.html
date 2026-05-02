@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Decode</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="grid-bg"></div>
+
+<a href="/" class="back">← Back</a>
+
+<div class="box">
+    <h2>🔓 Decode Message</h2>
+
+    <form action="/decode" method="POST" enctype="multipart/form-data">
+        
+        <!-- Upload Box -->
+        <label class="upload-box">
+            <input type="file" name="image" required hidden>
+            <div class="upload-content">
+                <p>📥 Drag & Drop or Click to Upload</p>
+                <span>Upload encoded PNG image</span>
+            </div>
+        </label>
+        <p id="file-name" style="font-size:12px; color:#9aa4b2;"></p>
+
+<script>
+const input = document.querySelector('input[type="file"]');
+const fileName = document.getElementById('file-name');
+
+input.addEventListener('change', function() {
+    fileName.textContent = this.files[0].name;
+});
+</script>
+
+        <!-- Button -->
+        <button type="submit" class="btn blue">Decode Message</button>
+    </form>
+</div>
+
+</body>
+</html>
